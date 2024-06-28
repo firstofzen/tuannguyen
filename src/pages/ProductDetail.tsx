@@ -4,7 +4,6 @@ import {cn} from "@/utils/utils.ts";
 import {Carousel, CarouselContent, CarouselNext, CarouselPrevious} from "@/components/ui/carousel.tsx";
 import {ParameterProduct} from "@/model.ts";
 import {WalletIcon} from "lucide-react";
-import {HoverBorderGradient} from "@/components/ui/HoverBorderGradient.tsx";
 import {
     Dialog,
     DialogContent,
@@ -29,6 +28,7 @@ const pp: ParameterProduct = {
 }
 export const ProductDetail = () => {
     const {id} = useParams()
+    console.log(id)
     return (
         <DefaultLayout>
             <section className={cn("block h-max mx-auto lg:grid grid-cols-3 w-[85svw]")}>

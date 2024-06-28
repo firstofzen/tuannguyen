@@ -51,6 +51,7 @@ export const Home = () => {
     const totalPage = products.length >= PAGE_SIZE ? Math.ceil(products.length / PAGE_SIZE) : 1
     const [currentPage, setCurrentPage] = useState<number>(1)
     const [category, setCategory] = useState<Category>(Category.Phone)
+    console.log(category)
     const [currentProducts, setCurrentProducts] = useState<Product[] | null>(pagination(currentPage, products, PAGE_SIZE))
     useEffect(() => {
         setCurrentProducts(pagination(currentPage, products, PAGE_SIZE))
